@@ -385,6 +385,12 @@ The csv dataset contains the 16 columns and 20000 rows. The data set contains th
   1. Promoting add-ons effectively, particularly during checkout or as recommendations, can significantly impact overall revenue.
   2. Consider offering bundles where popular add-ons are paired with main products at a slight discount to incentivize add-on purchases.
   3. Use data insights to target customers most likely to buy add-ons, such as those purchasing high-value items like laptops or smartphones, to increase overall revenue.
+---
+
+## Data Visualization
+Microsoft Excel 2019 was used for creating an Interactive Dashboard where key insights are visualised and filter by Gender, Loyalty members and a timeline for the Purchase date.
+
+
   
 
   
