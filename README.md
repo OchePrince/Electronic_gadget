@@ -45,7 +45,10 @@ The csv dataset contains the 16 columns and 20000 rows. The data set contains th
 	    Product_Type
    ORDER BY 	
 	  product_count DESC;
--**Output**:
+   
+- **Output**:
+  
+  ![Popular product](https://github.com/OchePrince/Electronic_gadget/blob/main/Popular%20product.png)
 
    
 
