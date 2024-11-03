@@ -124,7 +124,7 @@ The csv dataset contains the 16 columns and 20000 rows. The data set contains th
    2. It could also indicate that certain products appealing more to female customers have higher price points or are purchased in larger quantities per transaction.
    3. Understanding which product type drive higher average sales among females can help in creating tailored recommendations and promotions for similar products.
 
-#### Product Preference by Gender
+##### Product Preference by Gender
 - **SQL CODE**:
   ```SQL
 	SELECT 
@@ -143,23 +143,21 @@ The csv dataset contains the 16 columns and 20000 rows. The data set contains th
 
   ![gender preference](https://github.com/OchePrince/Electronic_gadget/blob/main/gender%20preference.png)
 
+- **Key Findings**: The analysis indicates a relatively balanced distribution between male and female customers. However, the data  shows that males have strong preference for all the product type compared to  females. This gender-based insight can inform targeted advertising campaigns and promotional strategies.
 
+#### Average Total Sales by Loyalty Members
+- **SQL CODE**:
+  ```SQL
+	SELECT 
+		LoyaltyMember,
+		AVG(Total_Sales) AS 'Avg Total Sales'
+	FROM sales
+	WHERE LoyaltyMember IN ('Yes', 'No')
+	GROUP BY LoyaltyMember
+	ORDER BY 2 DESC;
+- **Output**:
 
   
 
 
   
-
-  
-  
-
-
-
-
-
-   
-  	
-  
-	
-
-
