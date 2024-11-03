@@ -273,6 +273,22 @@ The csv dataset contains the 16 columns and 20000 rows. The data set contains th
 	    Shipping_Type
 	ORDER BY Avg_sales DESC;
 
+- **Output**:
+
+  ![Shipping type sales](https://github.com/OchePrince/Electronic_gadget/blob/main/Shipping%20type%20sales.png)
+ - **SQL CODE**:
+   ```SQL
+	SELECT 
+		Shipping_Type, 
+		OrderStatus,
+		COUNT(*) AS total_orders
+	FROM sales 
+	WHERE OrderStatus IN ('Completed', 'Cancelled')
+	GROUP BY Shipping_Type, OrderStatus
+	ORDER BY total_orders DESC, Shipping_Type;
+
+
+
   
 
 
