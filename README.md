@@ -139,6 +139,10 @@ The csv dataset contains the 16 columns and 20000 rows. The data set contains th
 	ORDER BY 
 	    Gender, 
 	    Product_Count DESC;
+- **Output**:
+
+  ![gender preference](https://github.com/OchePrince/Electronic_gadget/blob/main/gender%20preference.png)
+
 
 
   
