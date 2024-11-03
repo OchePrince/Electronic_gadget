@@ -221,6 +221,32 @@ The csv dataset contains the 16 columns and 20000 rows. The data set contains th
 	GROUP BY Product_Type
 	order by cancellation_rate desc;
 
+- **Output**:
+
+  ![product type on cancelled orders](https://github.com/OchePrince/Electronic_gadget/blob/main/product%20type%20on%20cancelled%20orders.png)
+
+- **Key Findings**:
+  1. **High Cancellation Rates Consistency**: The cancellation rates across all product types—Smartphones, Tablets, Laptops, Smartwatches, and Headphones—are quite similar, all around 32-33%. This consistency could indicate a systemic issue affecting all product categories, such as issues with the overall purchase experience, order processing, or shipping delays.
+  2. **Smartphone and Tablet have the highest number of total orders and cancelled orders**: This suggest that high-demand product may experience higher-order volume, which could be leading to increased cancellations due to factors like stock shortages or fulfillment delays.
+  3. **Potential for Product-Specific Improvement**: Although Headphones have the lowest cancellation count (650), their rate is still significant. Examining specific reasons for cancellations in this category might reveal opportunities to improve product appeal or resolve issues specific to the category, even if on a smaller scale.
+
+- **Recommendations**:
+   1. **Inventory Management**: Consider reinforcing stock for high-demand items like Smartphones and Tablets to minimize cancellations due to unavailability.
+   2. **Order Fulfillment**: Streamlining the order and shipping process for these popular items could help reduce cancellations.
+
+#### Effect of Shipping Type on Order Status
+- **SQL CODE**:
+  ```SQL
+	SELECT Shipping_Type, 
+	       COUNT(*) AS total_orders,
+	       SUM(CASE WHEN OrderStatus = 'Cancelled' THEN 1 ELSE 0 END) AS cancelled_orders,
+	       (SUM(CASE WHEN OrderStatus = 'Cancelled' THEN 1 ELSE 0 END) / COUNT(*)) * 100 AS cancellation_rate
+	FROM sales
+	GROUP BY Shipping_Type
+	ORDER BY cancelled_orders DESC, cancellation_rate DESC;
+
+  
+
 
 
   
