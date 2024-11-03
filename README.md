@@ -157,6 +157,22 @@ The csv dataset contains the 16 columns and 20000 rows. The data set contains th
 	ORDER BY 2 DESC;
 - **Output**:
 
+  ![loyaltymembers](https://github.com/OchePrince/Electronic_gadget/blob/main/loyaltymembers.png)
+
+- **Key Findings**: The analysis of average total sales based on loyalty membership status provides surprising insights:
+  1. **Higher Average Sales for Non-Members**: The data reveals that non-loyalty members have a slightly higher average total sales value of $3,254.20 compared to $3,199.75 for loyalty members. This indicates that, on average, non-members spend marginally more per purchase than loyalty members.
+  2. **Spending Behavior Difference**: While loyalty programs are typically designed to encourage higher spending and repeated purchases, the data suggests that in this case, non-members may be making larger purchases when they shop. This could be due to infrequent but higher-value purchases among non-members, whereas loyalty members might make smaller, more frequent purchases.
+
+**Implication**: Understanding customer demographics enables the business to create personalized marketing strategies, optimize product offerings, and enhance customer engagement. By identifying the primary age groups and gender preferences, the business can develop targeted promotions that resonate with the specific interests of these segments.
+
+**Recommendations**: 
+1. **Targeted Marketing Campaigns**: Develop campaigns specifically designed for high-purchasing age groups, such as the Adult and Old segments, leveraging platforms and messages that resonate with these demographics.
+2. **Gender-Specific Promotions**: Tailor product promotions and advertisements based on gender preferences to increase conversion rates. Smartphones and Tablet are the top male and female preference.
+3. **Targeted Promotions for Loyalty Members**: Consider introducing exclusive offers for loyalty members on high-value items or bundling options to encourage larger transactions.
+4. **Non-Member Engagement**: Explore ways to convert high-spending non-members into loyalty program participants, as their higher average sales suggest they may be valuable long-term customers if incentivized to join.
+5. **Program Enhancements**: Reevaluate the loyalty program structure to ensure it aligns with the spending habits and preferences of the current customer base, possibly offering tiered rewards for reaching higher spending thresholds.
+    
+
   
 
 
