@@ -374,6 +374,17 @@ The csv dataset contains the 16 columns and 20000 rows. The data set contains th
 	    OrderStatus = 'Completed'
 	GROUP BY 
 	    Addon_Status;
+
+- **Output**:
+
+  ![Addons Sales](https://github.com/OchePrince/Electronic_gadget/blob/main/Addons%20Sales.png)
+
+- **Key Findings**: Orders with add-ons generally show a higher average total sale value compared to those without. This suggests that add-on items increase revenue per transaction, providing an opportunity to drive up sales through bundled offers.
+
+- **Recommendations**:
+  1. Promoting add-ons effectively, particularly during checkout or as recommendations, can significantly impact overall revenue.
+  2. Consider offering bundles where popular add-ons are paired with main products at a slight discount to incentivize add-on purchases.
+  3. Use data insights to target customers most likely to buy add-ons, such as those purchasing high-value items like laptops or smartphones, to increase overall revenue.
   
 
   
