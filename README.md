@@ -338,6 +338,44 @@ The csv dataset contains the 16 columns and 20000 rows. The data set contains th
 	FROM sales
 	GROUP BY `Year`, `Month`
 	ORDER BY `Year`, Total_Sales DESC;
+
+- **Output**:
+
+  ![Sales Trend](https://github.com/OchePrince/Electronic_gadget/blob/main/Sales%20Trend.png)
+
+- **Key Findings**:
+   1. **Initial Surge in Sales (2023)**:
+       1. Sales tracking began in September 2023 with an initial total of $489,974.41.
+       2. October 2023 saw a substantial increase, reaching $2,356,303.47, marking the highest point in that year.
+       3. Following this peak, sales gradually declined, with $2,014,209.48 recorded by the year's end.
+   2. **Fluctuating Sales Patterns in 2024**:
+       1. January 2024 opened with strong sales, totaling $6,756,367.63, the highest monthly amount observed.
+       2. Sales fluctuated through the year, with a notable drop to $5,137,210.01 in September 2024, the lowest monthly total recorded in 2024.
+- **Insights**: These trends suggest seasonal peaks, with strong performances early in the year and dips in mid-to-late 2024. This information can be valuable for planning promotions and inventory adjustments to capitalize on high-demand periods and address slower months.
+
+- **Recommendations**:
+   1. **Increase Marketing Efforts**: Boost promotional activities in months preceding peak periods to maximize sales during high-demand times.
+   2. **Inventory Planning**: Adjust inventory to match anticipated demand fluctuations, particularly preparing for lower sales in the late third quarter.
+---
+
+### Impact of Addons Purchase on Total Sales
+- **Objective**: Assess how add-ons contribute to total sales and determine if they significantly boost revenue.
+- **SQL CODE**:
+  ```SQL
+	SELECT 
+	    CASE 
+	        WHEN Addons_Purchased IS NOT NULL AND Addons_Purchased != '' THEN 'With Add-ons'
+	        ELSE 'Without Add-ons'
+	    END AS Addon_Status,
+	    AVG(Total_Sales) AS avg_total_sales
+	FROM 
+	    sales
+	WHERE 
+	    OrderStatus = 'Completed'
+	GROUP BY 
+	    Addon_Status;
+  
+
   
 
   
