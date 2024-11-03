@@ -117,6 +117,30 @@ The csv dataset contains the 16 columns and 20000 rows. The data set contains th
 	ORDER BY 2 DESC;
 - **Output**:
 
+  ![gender sales](https://github.com/OchePrince/Electronic_gadget/blob/main/gender%20sales.png)
+
+- **Key Findings**: The data shows that the average sales for the female customers is slightly higher than the average sales of the male customers,  it suggests that on average, female customers tend to spend more per transaction than male customers. Here are some potential insights and interpretations for this finding:
+   1. Female customers might be purchasing higher-value products, or products with add-ons or upgrades, leading to higher average sales.
+   2. It could also indicate that certain products appealing more to female customers have higher price points or are purchased in larger quantities per transaction.
+   3. Understanding which product type drive higher average sales among females can help in creating tailored recommendations and promotions for similar products.
+
+#### Product Preference by Gender
+- **SQL CODE**:
+  ```SQL
+	SELECT 
+	    Gender,
+	    Product_Type,
+	    COUNT(*) AS Product_Count
+	FROM 
+	    sales
+	GROUP BY 
+	    Gender, 
+	    Product_Type
+	ORDER BY 
+	    Gender, 
+	    Product_Count DESC;
+
+
   
 
 
