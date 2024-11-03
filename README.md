@@ -98,6 +98,28 @@ The csv dataset contains the 16 columns and 20000 rows. The data set contains th
 	ORDER BY 2 DESC;
 - **Output**:
 
+  ![agebracket](https://github.com/OchePrince/Electronic_gadget/blob/main/agebracket%20.png)
+
+- **Key Findings**: The data reveals a diverse age distribution among our customers. The majority of sales are concentrated in specific age brackets, with the Adult and Old groups accounting for significant portions of total purchases. This suggests that marketing efforts could be particularly effective if targeted toward these demographics.
+
+#### Average Total Sales by Gender
+- **SQL CODE**:
+  ```SQL
+	SELECT 
+		Gender,
+	    AVG(Total_Sales) AS Average_sales
+	FROM 
+		sales
+	WHERE 
+	    OrderStatus = 'Completed'
+	GROUP BY 
+		Gender
+	ORDER BY 2 DESC;
+- **Output**:
+
+  
+
+
   
 
   
