@@ -315,6 +315,32 @@ The csv dataset contains the 16 columns and 20000 rows. The data set contains th
 	GROUP BY 
 		PaymentMethod
 	ORDER BY 4 DESC;
+
+- **Output**:
+
+   ![Paymentmethod analysis](https://github.com/OchePrince/Electronic_gadget/blob/main/Paymentmethod%20analysis.png)
+
+- **Key Findings**:
+   1. Credit  Card and Paypal Payment method shows a higher cancellation rate with 33.6% and 33.4% respectively. This may indicate issues related to transaction approval, buyer’s remorse, or customer hesitation specific to these methods.
+   2. Payment methods with lower cancellation rates, such as Cash or Debit Card, might be perceived as more secure or involve fewer complications, suggesting that these options could be emphasized in checkout processes to reduce cancellations.
+
+- **Recommendation: This analysis is useful for optimizing payment processing and identifying if customer education or improvements in specific payment methods could reduce cancellations. For instance, if online payment methods show higher cancellations, additional resources like reminders about secure checkout, flexibility in payment, or incentives for using certain methods could improve completion rates.
+---
+
+### Seasonal Sales Trend
+- **Objective**: To monitor monthly sales trends and pinpoint peak sales periods to inform marketing strategies and inventory planning.
+- **SQL CODE**:
+  ```SQL
+	SELECT 
+	    `Year`, 
+	    `Month`,
+	    SUM(Total_Sales) AS Total_Sales
+	FROM sales
+	GROUP BY `Year`, `Month`
+	ORDER BY `Year`, Total_Sales DESC;
+  
+
+  
   
 
   
@@ -325,12 +351,3 @@ The csv dataset contains the 16 columns and 20000 rows. The data set contains th
 
 
 
-  
-
-
-
-
-  
-
-
-  
