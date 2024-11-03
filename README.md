@@ -171,7 +171,28 @@ The csv dataset contains the 16 columns and 20000 rows. The data set contains th
 3. **Targeted Promotions for Loyalty Members**: Consider introducing exclusive offers for loyalty members on high-value items or bundling options to encourage larger transactions.
 4. **Non-Member Engagement**: Explore ways to convert high-spending non-members into loyalty program participants, as their higher average sales suggest they may be valuable long-term customers if incentivized to join.
 5. **Program Enhancements**: Reevaluate the loyalty program structure to ensure it aligns with the spending habits and preferences of the current customer base, possibly offering tiered rewards for reaching higher spending thresholds.
-    
+
+---
+### Total Sales Impact of Order Status
+**Objective**: To compare Total Sales from Completed vs Cancelled Orders and reasons for cancelled orders.
+
+#### Overview of Order Status 
+- **SQL CODE**:
+  ```SQL
+	SELECT 
+		OrderStatus,
+	    COUNT(*) AS 'Number of Orders'
+	FROM
+		Sales                                 
+	GROUP BY 
+		OrderStatus
+	ORDER BY                       
+		2 DESC;
+- **Output**:
+  
+
+
+
 
   
 
