@@ -245,6 +245,34 @@ The csv dataset contains the 16 columns and 20000 rows. The data set contains th
 	GROUP BY Shipping_Type
 	ORDER BY cancelled_orders DESC, cancellation_rate DESC;
 
+- **Output**:
+
+  ![Shipping type on order status](https://github.com/OchePrince/Electronic_gadget/blob/main/Shipping%20type%20on%20order%20status.png)
+
+- **Key Findings**:
+   1. **Consistent Cancellation Rates Across Shipping Options**: The cancellation rates for each shipping type—Standard, Expedited, Overnight, Same Day, and Express—are all close to the 32-34% range. This similarity suggests that cancellations are not strongly dependent on the shipping type alone, but could be influenced by other factors, such as product availability or customer expectations across the board.
+   2. **Standard Shipping Has Highest Absolute Cancellations**: Although cancellation rates are similar, Standard Shipping has the highest number of canceled orders in absolute terms (2,164). This may indicate that customers who choose the more economical Standard Shipping option are also more likely to cancel, potentially due to longer delivery times or delayed fulfillment.
+
+- **Recommendations**:
+   1. **Focus on Standard Shipping Improvement**: Given the higher absolute cancellations for Standard Shipping, consider reviewing fulfillment timelines and communication for this option. Improving reliability for Standard Shipping can directly impact a significant portion of orders.
+   2. **Refine Fast Shipping Experience**: For expedited options (Same Day and Express), ensure transparent communication about order processing times to set realistic expectations and reduce potential cancellations.
+   3. **Customer Feedback Analysis by Shipping Type**: Analyzing customer feedback specific to each shipping method may reveal insights on factors leading to cancellations, especially for high-cancellation options like Standard and Same Day.
+---
+
+### Average Sales by Shipping Type
+- **Objective**: The aim of this analysis is to determine which shipping types are associated with the highest average sales, as well as to understand if certain shipping options are linked to more canceled orders. This insight will help in identifying which shipping methods contribute most significantly to revenue.
+- **SQL CODE**:
+  ```SQL
+	SELECT 
+	    Shipping_Type,
+	    AVG(Total_Sales) AS Avg_sales
+	FROM 
+	    sales
+	WHERE OrderStatus = 'Completed'
+	GROUP BY 
+	    Shipping_Type
+	ORDER BY Avg_sales DESC;
+
   
 
 
