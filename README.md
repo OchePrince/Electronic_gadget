@@ -192,7 +192,7 @@ The csv dataset contains the 16 columns and 20000 rows. The data set contains th
 
   ![orderstatus overview](https://github.com/OchePrince/Electronic_gadget/blob/main/orderstatus%20overview.png)
 
--**Key Findings**: 67% of the total orders were completed while 33% of the Total orders were cancelled.
+- **Key Findings**: 67% of the total orders were completed while 33% of the Total orders were cancelled.
 
 #### Revenue Impact of Cancellation and Completed Orders
 - **SQL CODE**:
@@ -324,7 +324,7 @@ The csv dataset contains the 16 columns and 20000 rows. The data set contains th
    1. Credit  Card and Paypal Payment method shows a higher cancellation rate with 33.6% and 33.4% respectively. This may indicate issues related to transaction approval, buyer’s remorse, or customer hesitation specific to these methods.
    2. Payment methods with lower cancellation rates, such as Cash or Debit Card, might be perceived as more secure or involve fewer complications, suggesting that these options could be emphasized in checkout processes to reduce cancellations.
 
-- **Recommendation: This analysis is useful for optimizing payment processing and identifying if customer education or improvements in specific payment methods could reduce cancellations. For instance, if online payment methods show higher cancellations, additional resources like reminders about secure checkout, flexibility in payment, or incentives for using certain methods could improve completion rates.
+- **Recommendation**: This analysis is useful for optimizing payment processing and identifying if customer education or improvements in specific payment methods could reduce cancellations. For instance, if online payment methods show higher cancellations, additional resources like reminders about secure checkout, flexibility in payment, or incentives for using certain methods could improve completion rates.
 ---
 
 ### Seasonal Sales Trend
