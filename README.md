@@ -174,7 +174,7 @@ The csv dataset contains the 16 columns and 20000 rows. The data set contains th
 
 ---
 ### Total Sales Impact of Order Status
-**Objective**: To compare Total Sales from Completed vs Cancelled Orders and reasons for cancelled orders.
+**Objective**: To compare Total Sales from *Completed* vs *Cancelled Orders* and reasons for cancelled orders.
 
 #### Overview of Order Status 
 - **SQL CODE**:
@@ -189,6 +189,24 @@ The csv dataset contains the 16 columns and 20000 rows. The data set contains th
 	ORDER BY                       
 		2 DESC;
 - **Output**:
+
+  ![orderstatus overview](https://github.com/OchePrince/Electronic_gadget/blob/main/orderstatus%20overview.png)
+
+-**Key Findings**: 67% of the total orders were completed while 33% of the Total orders were cancelled.
+
+#### Revenue Impact of Cancellation and Completed Orders
+- **SQL CODE**:
+  ```SQL
+	SELECT 
+		OrderStatus,
+	    COUNT(*) AS total_orders,
+	    SUM(Total_Sales) AS "Total Sales"
+	FROM sales
+	WHERE OrderStatus IN ("Completed", "Cancelled")
+	GROUP BY OrderStatus;
+- **Output**: 
+
+
   
 
 
