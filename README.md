@@ -97,6 +97,10 @@ The csv dataset contains the 16 columns and 20000 rows. The data set contains th
 	GROUP BY Age_bracket
 	ORDER BY 2 DESC;
 - **Output**:
+
+  
+
+  
   
 
 
