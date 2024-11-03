@@ -204,7 +204,23 @@ The csv dataset contains the 16 columns and 20000 rows. The data set contains th
 	FROM sales
 	WHERE OrderStatus IN ("Completed", "Cancelled")
 	GROUP BY OrderStatus;
-- **Output**: 
+- **Output**:
+
+  ![orderstatus sales](https://github.com/OchePrince/Electronic_gadget/blob/main/orderstatus%20sales.png)
+
+- **Key Findings**: $21,382,354.52 was loss due to cancelled orders and $43,465,210.81 was made from completed orders.
+
+#### Effect of Product Type on Order Status
+- **SQL CODE**:
+  ```SQL
+	SELECT Product_Type, 
+	       COUNT(*) AS total_orders,
+	       SUM(CASE WHEN OrderStatus = 'Cancelled' THEN 1 ELSE 0 END) AS cancelled_orders,
+	       (SUM(CASE WHEN OrderStatus = 'Cancelled' THEN 1 ELSE 0 END) / COUNT(*)) * 100 AS cancellation_rate
+	FROM sales
+	GROUP BY Product_Type
+	order by cancellation_rate desc;
+
 
 
   
