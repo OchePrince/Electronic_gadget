@@ -31,6 +31,19 @@ The csv dataset contains the 16 columns and 20000 rows. The data set contains th
 -- Microsoft Excel 2019: For exploratory data analysis and data visualization.
 
 ## Key Insights
-**Product Performance**: Insight on popular product types
+### Sales Perfomance by Product Type
+**Question**: What is the most popular product and least popular product?
+- **Objective**: To identify the most in-demand products by analyzing the sales data, which can reveal customer preferences and help shape future inventory and marketing strategies.
+- **SQL CODE**: The following code was used to calculate the count of each product type, identifying the most and least popular products based on the number of sales transactions.
+   ```SQL
+    SELECT 
+	    Product_Type, 
+	    COUNT(*) AS product_count
+   FROM 
+	    sales
+   GROUP BY 
+	    Product_Type
+   ORDER BY 	
+	  product_count DESC;
 
 
