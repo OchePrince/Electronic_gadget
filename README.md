@@ -287,6 +287,38 @@ The csv dataset contains the 16 columns and 20000 rows. The data set contains th
 	GROUP BY Shipping_Type, OrderStatus
 	ORDER BY total_orders DESC, Shipping_Type;
 
+- **Output**:
+
+  ![SHIPPING VS OS](https://github.com/OchePrince/Electronic_gadget/blob/main/SHIPPING%20VS%20OS.png)
+
+- **Key Findings**:
+   1. Expedited and Same Day Shipping type contribute the most to the revenue with each generating an average sale of $3,896.13 and $3872.69 respectively. This indicates that these shipping options are particularly favored by customers making higher-value purchases, suggesting a possible association between faster shipping options and larger orders.
+   2. Standard and Overnight shipping types have the highest counts of both completed and canceled orders. While they are the most commonly used shipping options, they do not generate the highest average revenue compared to Expedited and Same Day options. This suggests that customers may choose Standard and Overnight shipping more often for smaller purchases or less time-sensitive orders.
+
+- **Recommendations**:
+  1. Expedited and Same Day shipping options could be promoted for high-value items, as they are associated with higher revenue per order.
+  2. Improving efficiency in Standard and Overnight shipping types might help reduce cancellations, enhancing customer experience for commonly used, lower-cost shipping options.
+  3. Analyzing customer preferences for these high-revenue shipping types can guide targeted promotions, particularly for customers inclined toward faster, higher-value purchases.
+---
+
+### Correlation Analysis of Payment Method and Order Status
+- **Objective**: The aim is to explore any relationship between payment methods and the likelihood of order cancellations. By understanding if certain payment methods correspond with higher or lower cancellation rates, the business can make informed decisions to enhance payment processing or implement customer support initiatives around payment options.
+- **SQL CODE**:
+  ```SQL
+	SELECT
+		PaymentMethod,
+	    SUM(CASE WHEN OrderStatus = 'Cancelled' THEN 1 ELSE 0 END) AS 'Cancelled Orders',
+	    COUNT(*) AS 'Total Orders',
+	    (SUM(CASE WHEN OrderStatus = 'Cancelled' THEN 1 ELSE 0 END) / COUNT(*)) * 100 AS 'Cancellation Rate'
+	FROM 
+		sales
+	GROUP BY 
+		PaymentMethod
+	ORDER BY 4 DESC;
+  
+
+  
+
 
 
   
