@@ -32,8 +32,9 @@ The csv dataset contains the 16 columns and 20000 rows. The data set contains th
 
 ## Key Insights
 ### Sales Perfomance by Product Type
-**Question**: What is the most popular product and least popular product?
+#### **Question 1**: What is the most popular product and least popular product?
 - **Objective**: To identify the most in-demand products by analyzing the sales data, which can reveal customer preferences and help shape future inventory and marketing strategies.
+  
 - **SQL CODE**: The following code was used to calculate the count of each product type, identifying the most and least popular products based on the number of sales transactions.
    ```SQL
     SELECT 
@@ -47,9 +48,29 @@ The csv dataset contains the 16 columns and 20000 rows. The data set contains th
 	  product_count DESC;
    
 - **Output**:
-  
+
   ![Popular product](https://github.com/OchePrince/Electronic_gadget/blob/main/Popular%20product.png)
 
-   
+- **Key Findings**: The analysis revealed that Smartphone is the most popular product type, indicating high demand and interest from customers, while Headphones were identified as the least popular product.
+
+- **Implication**: This information is valuable for inventory management, allowing the business to prioritize high-demand items. Stock levels for popular products like Smartphones should be maintained to meet demand, while lower-demand items like Headphones may need different stocking strategies.
+
+- **Recommendations**: Leverage the popularity of Smartphones in promotions, bundling offers, and targeted advertising campaigns. By focusing on these high-performing items, the business can maximize conversions, improve sales, and enhance the effectiveness of marketing efforts. For lower-demand products, consider implementing promotional discounts or alternative sales strategies to increase their appeal.
+
+#### **Question 2**: What is the Total Sales and Quantity Sold for each Product Type?
+- **OBJECTIVE**: To determine which Product type generate the most and least total sales and the number of quantity sold.
+- **SQL CODE** :
+  ```SQL
+	SELECT
+	  Product_Type,
+	    SUM(Total_Sales) AS Total_sales,
+	    SUM(Quantity) AS Quantity_sold
+	FROM sales
+	WHERE OrderStatus = 'Completed'
+	GROUP BY Product_Type
+	ORDER BY 2 DESC;
+- **CODE OUTPUT**:
+  
+
 
 
