@@ -49,7 +49,7 @@ The csv dataset contains the 16 columns and 20000 rows. The data set contains th
    
 - **Output**:
 
-  ![Popular product](https://github.com/OchePrince/Electronic_gadget/blob/main/Popular%20product.png)
+  ![Popular product](https://github.com/OchePrince/Electronic_gadget/blob/main/image%20%20/Popular%20product.png)
 
 - **Key Findings**: The analysis revealed that Smartphone is the most popular product type, indicating high demand and interest from customers, while Headphones were identified as the least popular product.
 
@@ -71,7 +71,7 @@ The csv dataset contains the 16 columns and 20000 rows. The data set contains th
 	ORDER BY 2 DESC;
 - **Output**:
 
-  ![Quantity sold](https://github.com/OchePrince/Electronic_gadget/blob/main/Quantity%20sold.png)
+  ![Quantity sold](https://github.com/OchePrince/Electronic_gadget/blob/main/image%20%20/Quantity%20sold.png)
 
 - **Key Findings**: The analysis reveals significant insights into product performance;
   1. **Smartphone**: Leading the sales chart with total sales of $14.6 million and a quantity sold of 21,947 units.
