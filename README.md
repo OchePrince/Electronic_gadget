@@ -30,6 +30,104 @@ The csv dataset contains the 16 columns and 20000 rows. The data set contains th
 - MySQL Workbench: For data cleaning and exploratory data analysis.
 -- Microsoft Excel 2019: For exploratory data analysis and data visualization.
 
+## Methodology
+- **Data Collection**: The dataset was initially imported into a MySQL database, where key cleaning steps were undertaken, such as removing duplicates, handling blank fields.
+- **Exploratory Data Analysis (EDA)**: The EDA was conducted in SQL and Excel, with queries designed to investigate patterns in customer behavior, product preferences, and transaction outcomes.
+- **Visualization**: Key insights were visualized in Excel, utilizing charts such as line graphs for sales trends, bar charts for product popularity, and pie charts for quantity of the product type sold out. Visualizations were chosen to clarify findings and support further interpretation.
+---
+
+## Analytical Approach
+
+### MySQL Analysis:
+- **Create a table**: First, a sales table was created to hold the imported data with appropriate data types for each column. This table design ensured all necessary information, such as customer demographics, purchase details, and sales totals, was accounted for.
+- **SQL CODE**:
+    ```SQL
+	    CREATE TABLE IF NOT EXISTS sales (
+		CustomerID INT,
+	    Age INT,
+	    Age_bracket VARCHAR(20),
+	    Gender VARCHAR(10),
+		LoyaltyMember VARCHAR(5),
+	    Product_Type VARCHAR(20),
+	    SKU VARCHAR(20),
+	    Rating INT,
+	    OrderStatus VARCHAR(20),
+	    PaymentMethod VARCHAR(20),
+	    TotalPrice DECIMAL(10,2),
+	    UnitPrice DECIMAL(10,2),
+	    Quantity INT,
+	    PurchaseDate DATE,
+	    `Month` VARCHAR(20),
+	    `Year` VARCHAR(20),
+	    Shipping_Type VARCHAR(20),
+	    Addons_Purchased VARCHAR(100),
+	    Add_on_total DECIMAL(10,2),
+	    Total_Sales DECIMAL(10,2)
+
+);
+
+- **Data Import**: The CSV file was imported into the sales table using the LOAD DATA INFILE method. This approach ensured the bulk data import was efficient and minimized manual entry error:
+- **SQL CODE**:
+   ```SQL
+	LOAD DATA INFILE "C:/ProgramData/MySQL/MySQL Server 8.0/Uploads/M&G_gadget.csv"
+	INTO TABLE sales
+	FIELDS TERMINATED BY ','
+	OPTIONALLY ENCLOSED BY '"'
+	LINES TERMINATED BY '\r\n'
+	IGNORE 1 ROWS;
+
+- **Data Cleaning**: Cleaning the data was essential for ensuring accuracy and consistency across the dataset before proceeding with exploratory analysis. Key cleaning tasks included checking for duplicates, outliers, and missing data.
+- **SQL CODE**:
+  ```SQL
+	SELECT 
+		*
+	FROM sales;
+	-- Checking For Duplicates
+	SELECT MD5(CONCAT(CustomerID, LoyaltyMember, Product_Type, SKU, PurchaseDate, OrderStatus, PaymentMethod, UnitPrice, Quantity, Shipping_Type, Addons_Purchased)) AS hash_key,
+	       COUNT(*) AS occurrence
+	FROM sales
+	GROUP BY hash_key
+	HAVING COUNT(*) > 1;
+	-- No Duplicate was found
+
+ i. **Outlier Detection**: Outliers were checked using the Quantity column to ensure that all entries fell within a reasonable range, using a method that considers values beyond three standard deviations from the mean:
+   - **SQL CODE**:
+      ```SQL
+	      -- Checking Outlier
+		SELECT *
+		FROM sales
+		WHERE Quantity > (SELECT AVG(Quantity) + 3 * STDDEV(Quantity) FROM sales);
+		-- No outliers was found
+ii. **Missing Values**: Blank entries in the Gender column were updated to Unknown, which allowed for uniformity in demographic analysis:
+- **SQL CODE**:
+   ```SQL
+	UPDATE sales
+	SET Gender = 'Unknown'
+	WHERE Gender IS NULL OR Gender = '';
+---
+
+## Descriptive Satistics of the Sales Data
+The descriptive statistics of the sales data provide a detailed overview of key metrics and trends, enabling a foundational understanding of the dataset before deeper analysis.
+   - **Basic Metrics** :
+     1. **Total Transactions**: The dataset contains records of customer purchases, including both completed and canceled orders, which helps in understanding the overall volume of sales activities.
+     2. **Average Sales and Purchase Values**: Calculating average Quantity sold, Unit Price, Total Price and Total Sales values across transactions offers insights into the typical order size, providing a basis for comparisons across categories like age group, product type, and payment method.
+ - **SQL CODE**:
+    ```SQL
+	SELECT
+		AVG(UnitPrice) AS "Average Unit Price",
+	    MIN(UnitPrice) AS "Mininum Unit Price",
+	    MAX(UnitPrice) AS "Maximum Unit Price",
+	    AVG(Quantity) AS "Average Quantity Sold",
+	    AVG(TotalPrice) AS "Average Total Price",
+	    AVG(Total_Sales) AS "Average Total Sales"
+	FROM sales;
+
+  - **Output**:
+
+
+
+
+
 ## Key Insights
 ### Sales Perfomance by Product Type
 #### **Question 1**: What is the most popular product and least popular product?
