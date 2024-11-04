@@ -124,9 +124,9 @@ The descriptive statistics of the sales data provide a detailed overview of key 
 
   - **Output**:
 
+    ![Descriptive sta](https://github.com/OchePrince/Electronic_gadget/blob/main/image/Descriptive%20sta.png)
 
-
-
+---
 
 ## Key Insights
 ### Sales Perfomance by Product Type
