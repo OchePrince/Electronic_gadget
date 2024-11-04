@@ -397,7 +397,7 @@ For this project, I used **Microsoft Excel 2019** to create an interactive dashb
 
 The dashboard provides a dynamic view of important metrics, making it easier to identify trends and patterns in the data.
 
-
+![Excel dashboard](https://github.com/OchePrince/Electronic_gadget/blob/main/image/Excel%20dashboard.png)
 
 ---
 
