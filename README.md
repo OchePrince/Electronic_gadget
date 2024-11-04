@@ -28,7 +28,7 @@ The csv dataset contains the 16 columns and 20000 rows. The data set contains th
 
 ## Tools Used
 - MySQL Workbench: For data cleaning and exploratory data analysis.
--- Microsoft Excel 2019: For exploratory data analysis and data visualization.
+- Microsoft Excel 2019: For exploratory data analysis and data visualization.
 
 ## Methodology
 - **Data Collection**: The dataset was initially imported into a MySQL database, where key cleaning steps were undertaken, such as removing duplicates, handling blank fields.
