@@ -49,7 +49,7 @@ The csv dataset contains the 16 columns and 20000 rows. The data set contains th
    
 - **Output**:
 
-  ![Popular product](https://github.com/OchePrince/Electronic_gadget/blob/main/image%20%20/Popular%20product.png)
+  ![Popular product](https://github.com/OchePrince/Electronic_gadget/blob/main/image/Popular%20product.png)
 
 - **Key Findings**: The analysis revealed that Smartphone is the most popular product type, indicating high demand and interest from customers, while Headphones were identified as the least popular product.
 
@@ -98,7 +98,7 @@ The csv dataset contains the 16 columns and 20000 rows. The data set contains th
 	ORDER BY 2 DESC;
 - **Output**:
 
-  ![agebracket](https://github.com/OchePrince/Electronic_gadget/blob/main/agebracket%20.png)
+  ![agebracket](https://github.com/OchePrince/Electronic_gadget/blob/main/image%20%20/agebracket%20.png)
 
 - **Key Findings**: The data reveals a diverse age distribution among our customers. The majority of sales are concentrated in specific age brackets, with the Adult and Old groups accounting for significant portions of total purchases. This suggests that marketing efforts could be particularly effective if targeted toward these demographics.
 
@@ -117,7 +117,7 @@ The csv dataset contains the 16 columns and 20000 rows. The data set contains th
 	ORDER BY 2 DESC;
 - **Output**:
 
-  ![gender sales](https://github.com/OchePrince/Electronic_gadget/blob/main/gender%20sales.png)
+  ![gender sales](https://github.com/OchePrince/Electronic_gadget/blob/main/image%20%20/gender%20sales.png)
 
 - **Key Findings**: The data shows that the average sales for the female customers is slightly higher than the average sales of the male customers,  it suggests that on average, female customers tend to spend more per transaction than male customers. Here are some potential insights and interpretations for this finding:
    1. Female customers might be purchasing higher-value products, or products with add-ons or upgrades, leading to higher average sales.
@@ -141,7 +141,7 @@ The csv dataset contains the 16 columns and 20000 rows. The data set contains th
 	    Product_Count DESC;
 - **Output**:
 
-  ![gender preference](https://github.com/OchePrince/Electronic_gadget/blob/main/gender%20preference.png)
+  ![gender preference](https://github.com/OchePrince/Electronic_gadget/blob/main/image%20%20/gender%20preference.png)
 
 - **Key Findings**: The analysis indicates a relatively balanced distribution between male and female customers. However, the data  shows that males have strong preference for all the product type compared to  females. This gender-based insight can inform targeted advertising campaigns and promotional strategies.
 
@@ -157,7 +157,7 @@ The csv dataset contains the 16 columns and 20000 rows. The data set contains th
 	ORDER BY 2 DESC;
 - **Output**:
 
-  ![loyaltymembers](https://github.com/OchePrince/Electronic_gadget/blob/main/loyaltymembers.png)
+  ![loyaltymembers](https://github.com/OchePrince/Electronic_gadget/blob/main/image%20%20/loyaltymembers.png)
 
 - **Key Findings**: The analysis of average total sales based on loyalty membership status provides surprising insights:
   1. **Higher Average Sales for Non-Members**: The data reveals that non-loyalty members have a slightly higher average total sales value of $3,254.20 compared to $3,199.75 for loyalty members. This indicates that, on average, non-members spend marginally more per purchase than loyalty members.
@@ -190,7 +190,7 @@ The csv dataset contains the 16 columns and 20000 rows. The data set contains th
 		2 DESC;
 - **Output**:
 
-  ![orderstatus overview](https://github.com/OchePrince/Electronic_gadget/blob/main/orderstatus%20overview.png)
+  ![orderstatus overview](https://github.com/OchePrince/Electronic_gadget/blob/main/image%20%20/orderstatus%20overview.png)
 
 - **Key Findings**: 67% of the total orders were completed while 33% of the Total orders were cancelled.
 
@@ -206,7 +206,7 @@ The csv dataset contains the 16 columns and 20000 rows. The data set contains th
 	GROUP BY OrderStatus;
 - **Output**:
 
-  ![orderstatus sales](https://github.com/OchePrince/Electronic_gadget/blob/main/orderstatus%20sales.png)
+  ![orderstatus sales](https://github.com/OchePrince/Electronic_gadget/blob/main/image/orderstatus%20sales.png)
 
 - **Key Findings**: $21,382,354.52 was loss due to cancelled orders and $43,465,210.81 was made from completed orders.
 
@@ -223,7 +223,7 @@ The csv dataset contains the 16 columns and 20000 rows. The data set contains th
 
 - **Output**:
 
-  ![product type on cancelled orders](https://github.com/OchePrince/Electronic_gadget/blob/main/product%20type%20on%20cancelled%20orders.png)
+  ![product type on cancelled orders](https://github.com/OchePrince/Electronic_gadget/blob/main/image%20%20/product%20type%20on%20cancelled%20orders.png)
 
 - **Key Findings**:
   1. **High Cancellation Rates Consistency**: The cancellation rates across all product types—Smartphones, Tablets, Laptops, Smartwatches, and Headphones—are quite similar, all around 32-33%. This consistency could indicate a systemic issue affecting all product categories, such as issues with the overall purchase experience, order processing, or shipping delays.
@@ -247,7 +247,7 @@ The csv dataset contains the 16 columns and 20000 rows. The data set contains th
 
 - **Output**:
 
-  ![Shipping type on order status](https://github.com/OchePrince/Electronic_gadget/blob/main/Shipping%20type%20on%20order%20status.png)
+  ![Shipping type on order status](https://github.com/OchePrince/Electronic_gadget/blob/main/image%20%20/Shipping%20type%20on%20order%20status.png)
 
 - **Key Findings**:
    1. **Consistent Cancellation Rates Across Shipping Options**: The cancellation rates for each shipping type—Standard, Expedited, Overnight, Same Day, and Express—are all close to the 32-34% range. This similarity suggests that cancellations are not strongly dependent on the shipping type alone, but could be influenced by other factors, such as product availability or customer expectations across the board.
@@ -275,7 +275,7 @@ The csv dataset contains the 16 columns and 20000 rows. The data set contains th
 
 - **Output**:
 
-  ![Shipping type sales](https://github.com/OchePrince/Electronic_gadget/blob/main/Shipping%20type%20sales.png)
+  ![Shipping type sales](https://github.com/OchePrince/Electronic_gadget/blob/main/image%20%20/Shipping%20type%20sales.png)
  - **SQL CODE**:
    ```SQL
 	SELECT 
@@ -289,7 +289,7 @@ The csv dataset contains the 16 columns and 20000 rows. The data set contains th
 
 - **Output**:
 
-  ![SHIPPING VS OS](https://github.com/OchePrince/Electronic_gadget/blob/main/SHIPPING%20VS%20OS.png)
+  ![SHIPPING VS OS](https://github.com/OchePrince/Electronic_gadget/blob/main/image%20%20/SHIPPING%20VS%20OS.png)
 
 - **Key Findings**:
    1. Expedited and Same Day Shipping type contribute the most to the revenue with each generating an average sale of $3,896.13 and $3872.69 respectively. This indicates that these shipping options are particularly favored by customers making higher-value purchases, suggesting a possible association between faster shipping options and larger orders.
@@ -318,7 +318,7 @@ The csv dataset contains the 16 columns and 20000 rows. The data set contains th
 
 - **Output**:
 
-   ![Paymentmethod analysis](https://github.com/OchePrince/Electronic_gadget/blob/main/Paymentmethod%20analysis.png)
+   ![Paymentmethod analysis](https://github.com/OchePrince/Electronic_gadget/blob/main/image/Paymentmethod%20analysis.png)
 
 - **Key Findings**:
    1. Credit  Card and Paypal Payment method shows a higher cancellation rate with 33.6% and 33.4% respectively. This may indicate issues related to transaction approval, buyer’s remorse, or customer hesitation specific to these methods.
@@ -341,7 +341,7 @@ The csv dataset contains the 16 columns and 20000 rows. The data set contains th
 
 - **Output**:
 
-  ![Sales Trend](https://github.com/OchePrince/Electronic_gadget/blob/main/Sales%20Trend.png)
+  ![Sales Trend](https://github.com/OchePrince/Electronic_gadget/blob/main/image%20%20/Sales%20Trend.png)
 
 - **Key Findings**:
    1. **Initial Surge in Sales (2023)**:
@@ -377,7 +377,7 @@ The csv dataset contains the 16 columns and 20000 rows. The data set contains th
 
 - **Output**:
 
-  ![Addons Sales](https://github.com/OchePrince/Electronic_gadget/blob/main/Addons%20Sales.png)
+  ![Addons Sales](https://github.com/OchePrince/Electronic_gadget/blob/main/image/Addons%20Sales.png)
 
 - **Key Findings**: Orders with add-ons generally show a higher average total sale value compared to those without. This suggests that add-on items increase revenue per transaction, providing an opportunity to drive up sales through bundled offers.
 
