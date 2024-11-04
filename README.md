@@ -387,8 +387,21 @@ The csv dataset contains the 16 columns and 20000 rows. The data set contains th
   3. Use data insights to target customers most likely to buy add-ons, such as those purchasing high-value items like laptops or smartphones, to increase overall revenue.
 ---
 
-## Data Visualization
-Microsoft Excel 2019 was used for creating an Interactive Dashboard where key insights are visualised and filter by Gender, Loyalty members and a timeline for the Purchase date.
+### 📊 Data Visualization
+
+For this project, I used **Microsoft Excel 2019** to create an interactive dashboard. This dashboard visualizes key insights from the data and allows users to filter results based on:
+
+- **Gender**: Analyze data specifically for different gender groups.
+- **Loyalty Members**: View metrics specifically for loyalty program members vs. non-members.
+- **Timeline**: Adjust the date filter to observe trends over specific time periods based on the Purchase Date.
+
+The dashboard provides a dynamic view of important metrics, making it easier to identify trends and patterns in the data.
+
+
+
+---
+
+
 
 
   
